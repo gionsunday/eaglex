@@ -3254,6 +3254,7 @@ pre {
     z-index: 1;
     left: 20%;
     right: 20%;
+    
 }
 @media screen and (max-width:987px) {
     .section {
@@ -3261,6 +3262,7 @@ pre {
         z-index: 1;
         left: 0%;
         right: 0%;
+        top:50px;
     }
     .section .section-title {
         font-size: 18px;
