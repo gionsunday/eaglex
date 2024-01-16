@@ -3869,7 +3869,7 @@ body.layout-3.top_menu_v2 .main-content {
 }
 
 body.layout-4 .navbar-bg {
-    background-image: url('/assets/img/home-banner.jpg');
+    background-image: url('../img/home-banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
