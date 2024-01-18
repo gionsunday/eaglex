@@ -11,7 +11,9 @@
     <!-- General CSS Files -->
     <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
-
+    <script src= 
+    "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+        </script> 
     <!-- CSS Libraries -->
 
     <link rel="stylesheet" href="../assets/modules/dropzonejs/dropzone.css">
@@ -55,23 +57,22 @@
 
 
                             </p>
-
-                       
-                        
                                     <div class="section-body">
                                       
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="card">
                                                     <div class="card-header">
-                                                        <h4>Upload Pictures (headshot and/or potrait)</h4>
+                                                        <h4>Choose Profile Picture</h4>
                                                     </div>
                                                     <div class="card-body">
-                                                        <form action="#" class="dropzone" id="mydropzone">
-                                                            <div class="fallback">
-                                                                <input name="file" required type="file" multiple />
-                                                            </div>
+                                                        <form action="#">
+                                                            <div class="section-title" style="color: rgb(77, 2, 109);">Headshot</div>
+                                                            <input type="file" name="" id="file1">
+                                                            <!-- <div class="section-title" style="color: rgb(77, 2, 109);">Portrait</div>
+                                                            <input type="file" name="" id="file2"> -->
                                                         </form>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -91,7 +92,7 @@
 
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary">Save & Next</button>
+                            <button class="btn btn-primary" id="profile_image_btn">Save & Next</button>
                         </div>
                 </div>
             </div>
@@ -120,9 +121,10 @@
 
     <!-- Page Specific JS File -->
 
-    <script src="../assets/modules/dropzonejs/min/dropzone.min.js"></script>
+    <!-- <script src="../assets/modules/dropzonejs/min/dropzone.min.js"></script> -->
     <!-- Template JS File -->
-<script src="../js/page/components-multiple-upload.js"></script>
+<!-- <script src="../js/page/components-multiple-upload.js"></script>  -->
+<script src="../js/pictures.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/custom.js"></script>
 </body>

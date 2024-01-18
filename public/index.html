@@ -11,6 +11,9 @@
     <!-- General CSS Files -->
     <link rel="stylesheet" href="assets/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/modules/fontawesome/css/all.min.css">
+    
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <!-- CSS Libraries -->
 
@@ -28,155 +31,160 @@
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg">
-            <!-- Start app main Content -->
-            <div class="container">
-                <section class="section">
-                    <div class="section-header">
-                        <h1 style=" text-align: center !important; text-shadow: 2px 2px #020101 !important">
-                            EAGLEX LAW PRACICE TEAM BIO FORM
-                        </h1>
-                        <!-- <div class="section-header-breadcrumb">
+                <!-- Start app main Content -->
+                <div class="container">
+                    <section class="section">
+                        <div class="section-header">
+                            <h1 style=" text-align: center !important; text-shadow: 2px 2px #020101 !important">
+                                EAGLEX LAW PRACICE TEAM BIO FORM
+                            </h1>
+                            <!-- <div class="section-header-breadcrumb">
                             
                         </div> -->
-                    </div>
+                        </div>
 
 
-                    <div class="section-body">
-                        <h2 class="section-title">Info:</h2>
-                        <p class="section-lead" style="  text-shadow: 0px 0px #020101 !important">
-                         Hello! <br />
-                         Please take few minues of your time to fill in the form fields below with your correct details.<br/>
-                         The fields marked <strong>*</strong> are required. <br/>
-                         Please ensure to save the image(s) you upload before moving to next item.<br/>
-                         <strong>Note:</strong> The information provided here will be used on the of the firm website.
+                        <div class="section-body">
+                            <h2 class="section-title">Info:</h2>
+                            <p class="section-lead" style="  text-shadow: 0px 0px #020101 !important">
+                                Hello! <br />
+                                Please take few minues of your time to fill in the form fields below with your correct
+                                details.<br />
+                                The fields marked <strong>*</strong> are required. <br />
+                                Please ensure to save the image(s) you upload before moving to next item.<br />
+                                <strong>Note:</strong> The information provided here will be used on the of the firm
+                                website.
 
 
-                        </p>
+                            </p>
 
 
 
-                        <div class="row">
-                            <div class="col-12 col-md-12 col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h4>Bio</h4>
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h4>Bio</h4>
+                                        </div>
+                                        <form action="" id="form">
+                                            <div class="card-body">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputFirstName">Firt Name *</label>
+                                                        <input type="text" class="form-control" id="firstname"
+                                                            placeholder="First Name" required>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Middle Name</label>
+                                                        <input type="text" class="form-control" id="middlename"
+                                                            placeholder="Middle Name">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Last Name *</label>
+                                                        <input type="text" class="form-control" id="lastname"
+                                                            placeholder="Last Name" required>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Your Email *</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            placeholder="example@gmail.com"required>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Your Email 2</label>
+                                                        <input type="email" class="form-control" id="email2"
+                                                            placeholder="example2@yahoo.com">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputLastName">Phone Number(s) *</label>
+                                                        <input type="email" class="form-control" id="phone"
+                                                            placeholder="+2344564334,+9958403554" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputAddress">Address *</label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="1234 Main St" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputAddress2">Address 2 </label>
+                                                    <input type="text" class="form-control" id="address2"
+                                                        placeholder="Apartment, studio, or floor">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputAddress2">LinkedIn Profile Link </label>
+                                                    <input type="text" class="form-control" id="linkedin"
+                                                        placeholder="https://www.linkedin.com/in/fullnama000asw0">
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="inputCity">City</label>
+                                                        <input type="text" class="form-control" id="city">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="inputState">State Of Origin</label>
+                                                        <select id="state" class="form-control">
+                                                            <option selected>Choose...</option>
+                                                            <option>Abia</option>
+                                                            <option>Adamawa</option>
+                                                            <option>Akwa Ibom</option>
+                                                            <option>Anambra</option>
+                                                            <option>Bauchi</option>
+                                                            <option>Bayelsa</option>
+                                                            <option>Benue</option>
+                                                            <option>Borno</option>
+                                                            <option>Cross River</option>
+                                                            <option>Delta</option>
+                                                            <option>Ebony</option>
+                                                            <option>Edo</option>
+                                                            <option>Ekiti</option>
+                                                            <option>Enugu</option>
+                                                            <option>Gombe</option>
+                                                            <option>Jigawa</option>
+                                                            <option>Kadun</option>
+                                                            <option>Kano</option>
+                                                            <option>Kastina</option>
+                                                            <option>Kebi</option>
+                                                            <option>Kogi</option>
+                                                            <option>Kwara</option>
+                                                            <option>Lagos</option>
+                                                            <option>Nasarawa</option>
+                                                            <option>Niger</option>
+                                                            <option>Ogun</option>
+                                                            <option>Ondo</option>
+                                                            <option>Osun</option>
+                                                            <option>Oyo</option>
+                                                            <option>Plateau</option>
+                                                            <option>Rivers</option>
+                                                            <option>Sokoto</option>
+                                                            <option>Taraba</option>
+                                                            <option>Yobe</option>
+                                                            <option>Zamfara</option>
+                                                            <option>FCT Abuja</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-2">
+                                                        <label for="inputZip">Zip</label>
+                                                        <input type="text" class="form-control" id="zip">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="card-footer">
+                                                <button class="btn btn-primary" id="submitbtn">Save & Next</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputFirstName">Firt Name *</label>
-                                                <input type="text" class="form-control" id="firstname"
-                                                    placeholder="First Name">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="inputLastName">Middle Name</label>
-                                                <input type="text" class="form-control" id="lastname"
-                                                    placeholder="Middle Name">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="inputLastName">Last Name *</label>
-                                                <input type="text" class="form-control" id="lastname"
-                                                    placeholder="Last Name">
-                                            </div>  
-                                            
-                                            <div class="form-group col-md-6">
-                                                <label for="inputLastName">Your Email *</label>
-                                                <input type="email" class="form-control" id="email"
-                                                    placeholder="example@gmail.com">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="inputLastName">Your Email 2</label>
-                                                <input type="email" class="form-control" id="email"
-                                                    placeholder="example2@yahoo.com">
-                                            </div>
-                                            <div class="form-group col-md-6">
-                                                <label for="inputLastName">Phone Number(s) *</label>
-                                                <input type="email" class="form-control" id="email"
-                                                    placeholder="+2344564334,+9958403554">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress">Address *</label>
-                                            <input type="text" class="form-control" id="address"
-                                                placeholder="1234 Main St">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress2">Address 2 </label>
-                                            <input type="text" class="form-control" id="address2"
-                                                placeholder="Apartment, studio, or floor">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputAddress2">LinkedIn Profile Link </label>
-                                            <input type="text" class="form-control" id="address2"
-                                                placeholder="https://www.linkedin.com/in/fullnama000asw0">
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="inputCity">City</label>
-                                                <input type="text" class="form-control" id="inputCity">
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="inputState">State Of Origin</label>
-                                                <select id="inputState" class="form-control">
-                                                    <option selected>Choose...</option>
-                                                    <option>Abia</option>
-                                                    <option>Adamawa</option>
-                                                    <option>Akwa Ibom</option>
-                                                    <option>Anambra</option>
-                                                    <option>Bauchi</option>
-                                                    <option>Bayelsa</option>
-                                                    <option>Benue</option>
-                                                    <option>Borno</option>
-                                                    <option>Cross River</option>
-                                                    <option>Delta</option>
-                                                    <option>Ebony</option>
-                                                    <option>Edo</option>
-                                                    <option>Ekiti</option>
-                                                    <option>Enugu</option>
-                                                    <option>Gombe</option>
-                                                    <option>Jigawa</option>
-                                                    <option>Kadun</option>
-                                                    <option>Kano</option>
-                                                    <option>Kastina</option>
-                                                    <option>Kebi</option>
-                                                    <option>Kogi</option>
-                                                    <option>Kwara</option>
-                                                    <option>Lagos</option>
-                                                    <option>Nasarawa</option>
-                                                    <option>Niger</option>
-                                                    <option>Ogun</option>
-                                                    <option>Ondo</option>
-                                                    <option>Osun</option>
-                                                    <option>Oyo</option>
-                                                    <option>Plateau</option>
-                                                    <option>Rivers</option>
-                                                    <option>Sokoto</option>
-                                                    <option>Taraba</option>
-                                                    <option>Yobe</option>
-                                                    <option>Zamfara</option>
-                                                    <option>FCT Abuja</option>
-                                                    
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-2">
-                                                <label for="inputZip">Zip</label>
-                                                <input type="text" class="form-control" id="inputZip">
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="card-footer">
-                                        <button class="btn btn-primary">Save & Next</button>
-                                    </div>
+                                
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                </div>
 
-            <!-- Start app Footer part -->
-            <!-- <footer class="main-footer">
+                <!-- Start app Footer part -->
+                <!-- <footer class="main-footer">
                 <div class="footer-left">
                     <div class="bullet"></div> <a href="templateshub.net">Templates Hub</a>
                 </div>
@@ -184,20 +192,21 @@
 
                 </div>
             </footer> -->
+            </div>
         </div>
-    </div>
 
-    <!-- General JS Scripts -->
-    <script src="assets/bundles/lib.vendor.bundle.js"></script>
-    <script src="js/CodiePie.js"></script>
+        <!-- General JS Scripts -->
+        <script src="assets/bundles/lib.vendor.bundle.js"></script>
+        <script src="js/CodiePie.js"></script>
 
-    <!-- JS Libraies -->
+        <!-- JS Libraies -->
 
-    <!-- Page Specific JS File -->
+        <!-- Page Specific JS File -->
 
-    <!-- Template JS File -->
-    <script src="js/scripts.js"></script>
-    <script src="js/custom.js"></script>
+        <!-- Template JS File -->
+        <script src="js/scripts.js"></script>        
+        <script src="js/custom.js"></script>
+        <script src="js/bio.js"></script>
 </body>
 
 <!-- bootstrap-form.html  Tue, 07 Jan 2020 03:36:23 GMT -->

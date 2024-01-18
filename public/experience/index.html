@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
 
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <!-- CSS Libraries -->
 
     <!-- Template CSS -->
@@ -54,14 +57,16 @@
 
 
                             </p>
-
+                            <form action="" id="form">
                             <div class="form-group">
                                 <label for="inputtextarea">Relevant Experiences *</label>
                                 <textarea style="height: 40px; text-align: left !important;" rows="50" cols="40"
-                                 class="form-control1 form-control" id="briefinfo"
+                                 class="form-control1 form-control" id="experience"
                                 placeholder="" >
                                 </textarea>
                             </div>
+                        </form>
+
 
                             <!-- <div class="form-group">
                                 <label for="inputAddress">Current Position *</label>
@@ -76,7 +81,7 @@
 
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary">Save & Next</button>
+                            <button id="submitbtn" class="btn btn-primary">Save & Next</button>
                         </div>
                 </div>
             </div>
@@ -106,6 +111,7 @@
     <!-- Page Specific JS File -->
 
     <!-- Template JS File -->
+    <script src="../js/experience.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/custom.js"></script>
 </body>
