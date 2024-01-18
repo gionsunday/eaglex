@@ -26,16 +26,21 @@ console.log(files)
 const filepath = files[0].path
 console.log(filepath)
 
-const result = await cloudinary.v2.uploader.upload(filepath, {
-    folder: "eaglex/team/pictures"
-})
-console.log(result)
-
- const {secure_url, name} = result
-        req.body.img_url = secure_url
-        const productImage = await Profile_Img.create({...req.body})
-        res.status(StatusCodes.CREATED).json({productImage})
+ try {
+    const result = await cloudinary.v2.uploader.upload(filepath, {
+        folder: "eaglex/team/pictures"
+    })
+    console.log(result)
     
+     const {secure_url, name} = result
+            req.body.img_url = secure_url
+            const productImage = await Profile_Img.create({...req.body})
+            res.status(StatusCodes.CREATED).json({productImage})
+        
+ } catch (error) {
+    console.log(error)
+ }
+
 }
 
 
