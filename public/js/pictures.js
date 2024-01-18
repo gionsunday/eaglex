@@ -13,7 +13,7 @@ $(document).ready(() =>{
        $("#profile_image_btn").text('Saving...')
         console.log(fileInput1)
        
-
+    const images = []
         const files1= fileInput1[0].files
         // const files2= fileInput2[0].files
        
