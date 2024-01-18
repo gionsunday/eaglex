@@ -18,13 +18,21 @@ const connectDB = require('./db/dbCon')
 
 //routes
 const authRouter =  require('./routes/AuthRoutes')
+const bioRouter = require('./routes/bio')
+const positionRouter = require('./routes/positions')
+const experienceRouter = require('./routes/experience')
+const pictureRouter = require('./routes/pictures')
 
 app.use('/', express.static(path.join(__dirname,'public')))
 app.use(express.json())
 
 app.use(cors())
 
-app.use('/apex/auth', authRouter)
+app.use('/eaglex', authRouter)
+app.use('/eaglex/bio', bioRouter)
+app.use('/eaglex/positions', positionRouter)
+app.use('/eaglex/experience', experienceRouter)
+app.use('/eaglex/pictures', pictureRouter)
 
 
 //errorhandllers

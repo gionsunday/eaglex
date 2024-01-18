@@ -1,4 +1,4 @@
-const Position = require("../models/positios");
+const Position = require("../models/positions");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");

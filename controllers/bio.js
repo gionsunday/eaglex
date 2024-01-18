@@ -33,7 +33,7 @@ const createBio = async (req, res) => {
   try {
     const bio = await Bio.create({ ...req.body });
 
-    res.status(StatusCodes.CREATED).json({ member: { name: bio.FirstName + bio.middleName + bio.lastName }, email:bio.email});
+    res.status(StatusCodes.CREATED).json({ member: { name: bio.firstName + " " + bio.middleName + " " + bio.lastName }, userId:bio._id, email:bio.email});
   } catch (error) {
     console.log(error)
   }
