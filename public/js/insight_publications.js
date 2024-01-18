@@ -4,7 +4,7 @@ window.addEventListener('load', () =>{
     const submitBtn = document.querySelector('#submitbtn')
     const form = document.querySelector('#form')
     const insightIn = document.getElementById('insights')
-    const publicationsIn = document.getElementById('publications')
+    // const publicationsIn = document.getElementById('publications')
     // const expertiseIn = document.getElementById('expertise')
 
 
@@ -15,13 +15,13 @@ window.addEventListener('load', () =>{
     submitBtn.addEventListener('click', async (e) =>{
          e.preventDefault()
          const insight = insightIn.value
-        const publications = publicationsIn.value
+        // const publications = publicationsIn.value
         //  const expertise = expertiseIn.value
         
          try {
             const data = await axios.post('/eaglex/insight_publications/create/insight_publications',{
-                insights:insight,
-                publications:publications,
+                insight:insight,
+                // publications:publications,
                
                 creator:localStorage.getItem('USERID')
                 
