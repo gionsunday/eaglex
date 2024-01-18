@@ -28,10 +28,14 @@ window.addEventListener('load', () =>{
                 }
                 
             })
+                submitBtn.textContent = "Saved!"
                 console.log(newData)
             window.location = '../success'
            
         } catch (error) {
+                  submitBtn.textContent = "Error Saving. Try again!"
+                
+                
             console.log(error)
             
         }
