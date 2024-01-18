@@ -3,8 +3,8 @@
 window.addEventListener('load', () =>{
     const submitBtn = document.querySelector('#submitbtn')
     const form = document.querySelector('#form')
-    const experienceIn = document.getElementById('experience')
-    // const positionIn = document.getElementById('position')
+    const insightIn = document.getElementById('insights')
+    const publicationsIn = document.getElementById('publications')
     // const expertiseIn = document.getElementById('expertise')
 
 
@@ -14,13 +14,14 @@ window.addEventListener('load', () =>{
 
     submitBtn.addEventListener('click', async (e) =>{
          e.preventDefault()
-         const experience = experienceIn.value
-        //  const position = positionIn.value
+         const insight = insightIn.value
+        const publications = publicationsIn.value
         //  const expertise = expertiseIn.value
         
          try {
-            const data = await axios.post('/eaglex/experience/create/experience',{
-                experience:experience,
+            const data = await axios.post('/eaglex/insight_publications/create/insight_publications',{
+                insights:insight,
+                publications:publications,
                
                 creator:localStorage.getItem('USERID')
                 
@@ -28,7 +29,7 @@ window.addEventListener('load', () =>{
             console.log(data)
             submitBtn.textContent = "Saving..."
             submitBtn.textContent ="Saved!"
-            window.location = '../insights_publications'
+            window.location = '../activities_affiliations'
          } catch (error) {
             console.log(error)
             

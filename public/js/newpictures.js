@@ -13,9 +13,8 @@ window.addEventListener('load', () =>{
     
     submitBtn.addEventListener('click', async (e) =>{
         e.preventDefault()
-
-            submitBtn.textContent = "Saving..."
-         console.log(files)
+    
+  console.log(files)
         const data = new FormData()
 
         data.append('creator', localStorage.getItem('USERID'))
@@ -28,14 +27,9 @@ window.addEventListener('load', () =>{
                 }
                 
             })
-                submitBtn.textContent = "Saved!"
-                console.log(newData)
             window.location = '../success'
            
         } catch (error) {
-                  submitBtn.textContent = "Error Saving. Try again!"
-                
-                
             console.log(error)
             
         }
