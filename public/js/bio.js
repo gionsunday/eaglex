@@ -8,6 +8,7 @@ window.addEventListener('load', () =>{
     const lastNameIn = document.getElementById('lastname')
     const emailIn = document.getElementById('email')
     const emailIn2 = document.getElementById('email2')
+    const languagesIn = document.getElementById('languages')
     const phoneNumIn = document.getElementById('phone')
     const addressIn = document.getElementById('address')
     const addressIn2 = document.getElementById('address2')
@@ -28,6 +29,7 @@ window.addEventListener('load', () =>{
          const email = emailIn.value
          const email2 = emailIn2.value
          const phoneNumber = phoneNumIn.value
+        const languages = languagesIn.value
          const address = addressIn.value
          const address2 = addressIn2.value
          const linkedIn = linkedInIn.value
@@ -42,6 +44,7 @@ window.addEventListener('load', () =>{
                 lastName:lastName,
                 email:email,
                 email2:email2,
+                languages:languages,
                 phone:phoneNumber,
                 address:address,
                 address2:address2,
