@@ -13,7 +13,12 @@ const BioSchema = new mongoose.Schema({
     middleName: {
         type: String,
         trim: true,
-        require: true,
+       
+    },
+       languages: {
+        type: String,
+        trim: true,
+       
     },
     lastName: {
         type: String,
