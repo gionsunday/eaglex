@@ -22,6 +22,8 @@ const bioRouter = require('./routes/bio')
 const positionRouter = require('./routes/positions')
 const experienceRouter = require('./routes/experience')
 const pictureRouter = require('./routes/pictures')
+const insightPubRouter = require('./routes/insight_publications')
+const activeAffiliateRouter = require('./routes/activities_affiliations')
 
 app.use('/', express.static(path.join(__dirname,'public')))
 app.use(express.json())
@@ -33,6 +35,8 @@ app.use('/eaglex/bio', bioRouter)
 app.use('/eaglex/positions', positionRouter)
 app.use('/eaglex/experience', experienceRouter)
 app.use('/eaglex/pictures', pictureRouter)
+app.use('/eaglex/insight_publications', insightPubRouter)
+app.use('/eaglex/activities_affiliations', activeAffiliateRouter)
 
 
 //errorhandllers
