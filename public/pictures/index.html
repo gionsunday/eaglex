@@ -11,9 +11,10 @@
     <!-- General CSS Files -->
     <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
-    <script src= 
-    "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
-        </script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
     <!-- CSS Libraries -->
 
     <link rel="stylesheet" href="../assets/modules/dropzonejs/dropzone.css">
@@ -51,33 +52,33 @@
                                 Please take few minues of your time to fill in the form fields below with your correct
                                 details.<br />
                                 The fields marked <strong>*</strong> are required. <br />
-                                Please ensure to save the image(s) you upload before moving to next item.<br />
                                 <strong>Note:</strong> The information provided here will be used on the of the firm
                                 website.
 
 
                             </p>
-                                    <div class="section-body">
-                                      
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <div class="card">
-                                                    <div class="card-header">
-                                                        <h4>Choose Profile Picture</h4>
+                            <div class="section-body">
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>Choose Profile Picture</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <form action="#">
+                                                    <div class="section-title" style="color: rgb(77, 2, 109);">Headshot
                                                     </div>
-                                                    <div class="card-body">
-                                                        <form action="#">
-                                                            <div class="section-title" style="color: rgb(77, 2, 109);">Headshot</div>
-                                                            <input type="file" name="" id="file1">
-                                                            <!-- <div class="section-title" style="color: rgb(77, 2, 109);">Portrait</div>
+                                                    <input type="file" name="" id="input">
+                                                    <!-- <div class="section-title" style="color: rgb(77, 2, 109);">Portrait</div>
                                                             <input type="file" name="" id="file2"> -->
-                                                        </form>
-                                                        
-                                                    </div>
-                                                </div>
+                                                </form>
+
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
 
                             <!-- <div class="form-group">
                                 <label for="inputAddress">Current Position *</label>
@@ -92,7 +93,7 @@
 
                         </div>
                         <div class="card-footer">
-                            <button class="btn btn-primary" id="profile_image_btn">Save & Next</button>
+                            <button class="btn btn-primary" id="submitbtn">Save & Submit</button>
                         </div>
                 </div>
             </div>
@@ -113,6 +114,9 @@
     </div>
     </div>
 
+    <script>
+        
+    </script>
     <!-- General JS Scripts -->
     <script src="../assets/bundles/lib.vendor.bundle.js"></script>
     <script src="../js/CodiePie.js"></script>
@@ -123,8 +127,8 @@
 
     <!-- <script src="../assets/modules/dropzonejs/min/dropzone.min.js"></script> -->
     <!-- Template JS File -->
-<!-- <script src="../js/page/components-multiple-upload.js"></script>  -->
-<script src="../js/pictures.js"></script>
+    <!-- <script src="../js/page/components-multiple-upload.js"></script>  -->
+    <script src="../js/newpictures.js"></script>
     <script src="../js/scripts.js"></script>
     <script src="../js/custom.js"></script>
 </body>
