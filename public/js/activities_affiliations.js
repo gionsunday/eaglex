@@ -4,7 +4,7 @@ window.addEventListener('load', () =>{
     const submitBtn = document.querySelector('#submitbtn')
     const form = document.querySelector('#form')
     const activitiesIn = document.getElementById('activities')
-    const affiliationsIn = document.getElementById('affiliations')
+    // const affiliationsIn = document.getElementById('affiliations')
     // const expertiseIn = document.getElementById('expertise')
 
 
@@ -15,13 +15,13 @@ window.addEventListener('load', () =>{
     submitBtn.addEventListener('click', async (e) =>{
          e.preventDefault()
          const activities = activitiesIn.value
-        const affiliations = affiliationsIn.value
+        // const affiliations = affiliationsIn.value
         //  const expertise = expertiseIn.value
         
          try {
             const data = await axios.post('/eaglex/activities_affiliations/create/activities_affiliations',{
                 activities:activities,
-                affiliations:affiliations,
+               
                
                 creator:localStorage.getItem('USERID')
                 
